@@ -4,6 +4,8 @@ const express = require("express"),
     bodyParser = require("body-parser"),
     axios = require("axios");
 require("dotenv").config();
+const cors = require('cors');
+app.use(cors());
 
 
 var User = require("./model");
