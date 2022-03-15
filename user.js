@@ -49,7 +49,7 @@ app.post('/addUser', (req, res) => {
     var dataSave = new User(dataPulled);
     dataSave.save().then((response) => {
         var userID = response._id;
-        axios.get("http://localhost:8001/allSeries").then((response) => {
+        axios.get("https://pratilipi-microservices.herokuapp.com/contentService/allSeries").then((response) => {
             var obj = {
                 _id: userID,
                 content: []
