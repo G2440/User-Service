@@ -63,7 +63,7 @@ app.post('/addUser', (req, res) => {
                 obj.content.push(conObj);
             }
 
-            axios.post("http://localhost:8002/userAdd", obj);
+            axios.post("https://pratilipi-microservices.herokuapp.com/dailypassService/userAdd", obj);
         })
 
     }).catch((err) => {
