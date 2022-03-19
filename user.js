@@ -66,7 +66,7 @@ app.post('/addUser', (req, res) => {
             }
 
             axios.post("https://pratilipi-microservices.herokuapp.com/dailypassService/userAdd", obj).then(()=>{
-             return res.json("User has been added to the database");
+             return res.send("User has been added to the database");
             }).catch((err)=>{
                 console.log(err);
             });
